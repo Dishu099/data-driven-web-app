@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data-Driven Web Application</h1>
+        <div class="upload-section">
+            <h2>CSV Upload</h2>
+            <input type="file" id="csvFileInput" accept=".csv">
+            <div id="progressWrapper">
+                <progress id="uploadProgress" value="0" max="100"></progress>
+                <span id="uploadPercentage">0%</span>
+            </div>
+            <div id="csvData"></div>
+        </div>
+        <div class="data-display">
+            <h2>Data Display and Pagination</h2>
+            <table id="dataTable"></table>
+            <div id="pagination"></div>
+        </div>
+        <div class="pricing-calculator">
+            <h2>Subscription Pricing Calculator</h2>
+            <label for="creditScore">Credit Score:</label>
+            <input type="number" id="creditScore" min="500" max="850" step="1" value="500">
+            <label for="creditLines">Credit Lines:</label>
+            <input type="number" id="creditLines" min="1" max="5" step="1" value="1">
+            <button onclick="calculatePrice()">Calculate</button>
+            <p id="subscriptionPrice">Subscription Price: </p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
